@@ -27,7 +27,11 @@ function addGS() {
         },
         redirect: 'follow', // manual, *follow, error
         // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify({ name: 'John', email:'user@example.com', ip_address: '76.153.114.0' }), // body data type must match "Content-Type" header
+        body: JSON.stringify({
+            name: 'John',
+            ip_address: '76.153.114.0',
+            email: 'user@example.com',
+        }), // body data type must match "Content-Type" header
     });
 }
 
