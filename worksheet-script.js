@@ -14,7 +14,8 @@ document.getElementById('btn').addEventListener('click', testGS);
 function addGS() {
     // v4
     const url =
-        'https://script.google.com/macros/s/AKfycbxhBwgbr2_t-T1DkAOE44EPAqWvUcJEW1MsyhMmxzk19Z4fuJmjgKij-K88keifCnRk/exec';
+        'https://script.google.com/macros/s/AKfycbxIGvjk1hSZOQBwmC-iwX-cHeH-h6z6goLgJhqiDkTyGCtfiZQ/exec';
+
     fetch(url, {
         method: 'POST', // GET*, POST, PUT, DELETE, etc.
         mode: 'no-cors', // no-cors, *cors, same-origin
