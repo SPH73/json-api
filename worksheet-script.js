@@ -1,7 +1,7 @@
-function testGS() {
-    const url =
-        'https://script.google.com/macros/s/AKfycbx_vMEICySkq5KNNPeqbGsVWIH2S4PdcEbIMIsqafV7wTcfAjE1orA7cQJFnenHPI7L/exec';
+const url =
+    'https://script.google.com/macros/s/AKfycbxIGvjk1hSZOQBwmC-iwX-cHeH-h6z6goLgJhqiDkTyGCtfiZQ/exec';
 
+function testGS() {
     fetch(url)
         .then(d => d.json())
         .then(d => {
@@ -13,13 +13,11 @@ document.getElementById('btn').addEventListener('click', testGS);
 
 function addGS() {
     // v4
-    const url =
-        'https://script.google.com/macros/s/AKfycbxIGvjk1hSZOQBwmC-iwX-cHeH-h6z6goLgJhqiDkTyGCtfiZQ/exec';
 
     fetch(url, {
         method: 'POST', // GET*, POST, PUT, DELETE, etc.
         mode: 'no-cors', // no-cors, *cors, same-origin
-        // cache: 'no-cache', // default*, no-cache, reload, force-cache, only-if-cached
+        cache: 'no-cache', // default*, no-cache, reload, force-cache, only-if-cached
         // credentials: 'omit', // same-origin' include, *same-origin, omit
         headers: {
             'Content-Type': 'application/json',
@@ -27,11 +25,12 @@ function addGS() {
         },
         redirect: 'follow', // manual, *follow, error
         // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        // body data type must match "Content-Type" header
         body: JSON.stringify({
-            name: 'sally',
-            ip_address: '76.153.114.0',
-            email: 'user@example.com',
-        }), // body data type must match "Content-Type" header
+            name: 'Someone Else',
+            email: 'someone@somewhere.com',
+            ip: '68.49.203.255',
+        }),
     });
 }
 
